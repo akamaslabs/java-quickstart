@@ -1,0 +1,34 @@
+name: renaissance-optimize
+
+tasks:
+- name: Configure Benchmark
+  operator: FileConfigurator
+  arguments:
+    source:
+      hostname: benchmark
+      username: akamas
+      password: akamas
+      path: launch_benchmark.sh.templ
+    target:
+      hostname: benchmark
+      username: akamas
+      password: akamas
+      path: launch_benchmark.sh
+
+- name: Launch Benchmark
+  operator: Executor
+  arguments:
+    command: "bash launch_benchmark.sh"
+    host:
+      hostname: benchmark
+      username: akamas
+      password: akamas
+
+- name: Parse Output
+  operator: Executor
+  arguments:
+    command: "bash parse_output.sh"
+    host:
+      hostname: benchmark
+      username: akamas
+      password: akamas

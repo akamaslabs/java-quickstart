@@ -1,0 +1,10 @@
+#!/bin/bash
+
+pkill -9 renaissance
+sleep 10s
+
+cd "$(dirname "$0")"
+
+BENCHMARK=${1:-scala-stm-bench7}
+
+./time-it.sh /opt/jdk-11.0.10+9/bin/java ${jvm.*} -XX:+ExitOnOutOfMemoryError -XX:ActiveProcessorCount=2 -jar renaissance.jar --csv renaissance.csv --operation-run-seconds 60 ${BENCHMARK}

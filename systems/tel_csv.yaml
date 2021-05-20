@@ -1,0 +1,20 @@
+provider: CSV File
+
+config:
+  protocol: scp
+  address: benchmark
+  username: akamas
+  authType: password
+  auth: akamas
+  remoteFilePattern: renaissance-parsed.csv
+  componentColumn: component
+  timestampColumn: TS
+  timestampFormat: yyyy-MM-dd HH:mm:ss zzz
+
+metrics:
+- metric: response_time
+  datasourceMetric: duration_ns
+- metric: cpu_used
+  datasourceMetric: cpu_used
+- metric: mem_used
+  datasourceMetric: mem_used

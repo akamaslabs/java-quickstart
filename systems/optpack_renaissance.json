@@ -1,0 +1,42 @@
+{
+  "name": "Renaissance",
+  "description": "The renaissance optimization pack provides an easy way to setup all the required metrics, parameters and component types used to run the renaissance benchamrk suite.",
+  "weight": 1,
+  "version": "1.1.0",
+  "tags": [
+    "java",
+    "benchmark"
+  ],
+  "specification": {
+    "componentTypes": [
+      {
+        "name": "renaissance",
+        "description": "A component type to model the Renaissance Java benchmark",
+        "parameters": [],
+        "metrics": [
+          {
+            "name": "response_time"
+          },
+          {
+            "name": "cpu_used"
+          },
+          {
+            "name": "mem_used"
+          }
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "name": "response_time",
+        "unit": "nanoseconds",
+        "description": "The response time of the benchmark execution"
+      }
+    ],
+    "parameters": [],
+    "telemetryProviders": []
+  },
+  "status": "AVAILABLE",
+  "statusMessage": "",
+  "id": "bc8532f1-784e-4f6c-bb9f-edc0d9f1ca46"
+}

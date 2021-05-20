@@ -1,0 +1,39 @@
+name: Optimize Java application performance
+system: renaissance
+
+goal:
+  objective: minimize
+  function:
+    formula: renaissance.response_time
+
+workflow: renaissance-optimize
+
+parametersSelection:
+- name: jvm.jvm_gcType
+- name: jvm.jvm_maxHeapSize
+  domain: [32, 1024]
+- name: jvm.jvm_newSize
+  domain: [16, 1024]
+- name: jvm.jvm_survivorRatio
+- name: jvm.jvm_maxTenuringThreshold
+- name: jvm.jvm_maxHeapFreeRatio
+  domain: [41, 100]
+
+metricsSelection:
+- renaissance.response_time
+- renaissance.cpu_used
+- renaissance.mem_used
+
+parameterConstraints:
+- name: "Max heap must always be greater than new size"
+  formula: jvm.jvm_maxHeapSize > jvm.jvm_newSize
+
+steps:
+- name: baseline
+  type: baseline
+  values:
+    jvm.jvm_maxHeapSize: 1024
+
+- name: optimize
+  type: optimize
+  numberOfExperiments: 30
