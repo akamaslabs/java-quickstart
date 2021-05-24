@@ -1,6 +1,6 @@
 # Systems
 
-This folder contains the artifacts required to model and optimize in [Akamas][Site] the execution of the [Renaissance benchmark][Renaiss]:
+This folder contains the artifacts required to model in [Akamas][Site] the [Renaissance benchmark][Renaiss]:
 
 - `optpack_renaissance.json`: an optimization-pack containing the parameters and metrics required to model a Renaissance benchmark
 
