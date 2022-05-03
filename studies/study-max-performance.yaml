@@ -24,6 +24,17 @@ metricsSelection:
 - renaissance.cpu_used
 - renaissance.mem_used
 
+kpis:
+  - name: "Response time"
+    formula: renaissance.response_time
+    direction: minimize
+  - name: "CPU used"
+    formula: renaissance.cpu_used
+    direction: minimize
+  - name: "Memory used"
+    formula: renaissance.mem_used
+    direction: minimize
+
 parameterConstraints:
 - name: "Max heap must always be greater than new size"
   formula: jvm.jvm_maxHeapSize > jvm.jvm_newSize
