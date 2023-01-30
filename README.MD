@@ -1,8 +1,6 @@
 # Getting Started - Optimize your very first Java application (JVM Tuning)
 
-This repository contains the artifacts for the [Akamas][Site] guide _[Getting Started - Optimize your very first Java application (JVM Tuning)][GuideQuick]_, _[Create an optimization study using the UI wizard][GuideUI]_, and _[Add constraints when optimizing a Java-based application][GuideConstr]_.
+This repository contains the artifacts for the [Akamas][Site] guide *[Optimize a Java-based application (Renaissance benchmark)][AIAB-01]*.
 
 [Site]: https://www.akamas.io/
-[GuideQuick]: https://explore.akamas.io/codelabs/java-quickstart/index.html
-[GuideUI]: https://explore.akamas.io/codelabs/java-quickstart-custom-study/index.html
-[GuideConstr]: https://explore.akamas.io/codelabs/java-quickstart-study-constraint/index.html
+[AIAB-01]: https://docs.akamas.io/quick-guides/quick-guides-aiab/aiab-01-optimize-a-java-based-application-renaissance-benchmark
